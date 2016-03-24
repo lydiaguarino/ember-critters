@@ -1,3 +1,42 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="container">
 
-{{outlet}}
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <h1>Ember Critters</h1>
+      {{morph-critter model=model}}
+    </div>
+
+    <div class="col-md-6 col-xs-12">
+      <h1>Build-A-Critter</h1>
+
+      <div class="row gap">
+        <button class="critter-choice" id="choose-sloth" {{action 'setCritter' 'sloth'}}>{{sloth-critter}}</button>
+        <button class="critter-choice" id="choose-owl" {{action 'setCritter' 'owl'}}>{{owl-critter}}</button>
+        <button class="critter-choice" id="choose-lemur" {{action 'setCritter' 'lemur'}}>{{lemur-critter}}</button>
+        <button class="critter-choice" id="choose-fox" {{action 'setCritter' 'fox'}}>{{fox-critter}}</button>
+        <button class="critter-choice" id="choose-penguin" {{action 'setCritter' 'penguin'}}>{{penguin-critter}}</button>
+      </div>
+
+      <div class="row gap">
+        <div class="col-md-12 component-example">
+          <p class="indent">{ { {{model.type}}-critter</p>
+          <p class="indent">bodyColor = {{input type='text' value=model.bodyColor}}<span class="color-swatch" style="background-color:{{model.bodyColor}}"></span></p>
+          <p class="indent">darkContrastColor = {{input type='text' value=model.darkContrastColor}}<span class="color-swatch" style="background-color:{{model.darkContrastColor}}"></span></p>
+          <p class="indent">lightContrastColor = {{input type='text' value=model.lightContrastColor}}<span class="color-swatch" style="background-color:{{model.lightContrastColor}}"></span></p>
+          {{#unless model.isSloth}}
+            <p class="indent">noseColor = {{input type='text' value=model.noseColor}}<span class="color-swatch" style="background-color:{{model.noseColor}}"></span></p>{{/unless}}
+
+          {{#unless model.isFox}}<p class="indent">accentColor = {{input type='text' value=model.accentColor}}<span class="color-swatch" style="background-color:{{model.accentColor}}"></span></p>{{/unless}}
+
+          <p class="indent">{{#if model.isLemur}}eyeColor = {{input type='text' value=model.eyeColor}}<span class="color-swatch" style="background-color:{{model.eyeColor}}"></span>
+           {{/if}} } }
+          </p>
+          <button id="choose-penguin" {{action 'reset'}}>RESET</button>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

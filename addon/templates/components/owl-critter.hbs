@@ -1,0 +1,91 @@
+<svg viewBox="0 0 220 220" version="1.1" xmlns="http://www.w3.org/2000/svg" class="owl-critter">
+  <a href="" {{action 'blink'}}>
+    <!-- wings -->
+    {{#if moving}}
+      <polygon class="owl-critter__wing-left--flapping" points="64,90 68,102 75,110 35,130 5,100" fill="{{accentColor}}" stroke="{{accentColor}}" stroke-width="5" stroke-linejoin="round"/>
+      <polygon class="owl-critter__wing-right--flapping" points="156,90 152,102 145,110 185,130 215,100" fill="{{accentColor}}" stroke="{{accentColor}}" stroke-width="5" stroke-linejoin="round"/>
+    {{else}}
+      <polygon class="owl-critter__wing-left--folded" points="62,100 68,102 75,120 65,180 55,130" fill="{{accentColor}}" stroke="{{accentColor}}" stroke-width="5" stroke-linejoin="round"/>
+      <polygon class="owl-critter__wing-right--folded" points="158,100 152,102 145,120 155,180 165,130" fill="{{accentColor}}" stroke="{{accentColor}}" stroke-width="5" stroke-linejoin="round"/>
+    {{/if}}
+
+    <!-- body -->
+    <ellipse class="owl-critter__body" cx="110" cy="130" rx="53" ry="65" fill="{{bodyColor}}"/>
+
+    <!-- legs -->
+    <polygon class="owl-critter__leg-left" points="58,130 80,205 105,205 110,190" fill="{{bodyColor}}"/>
+    <polygon class="owl-critter__leg-right" points="162,130 140,205 115,205 110,190" fill="{{bodyColor}}"/>
+
+    <!-- toes left -->
+    <ellipse class="owl-critter__toe-left" cx="80" cy="205" rx="5" ry="7" fill="{{accentColor}}"/>
+    <ellipse class="owl-critter__toe-left" cx="90" cy="205" rx="5" ry="7" fill="{{accentColor}}"/>
+    <ellipse class="owl-critter__toe-left" cx="100" cy="205" rx="5" ry="7" fill="{{accentColor}}"/>
+
+    <!-- toes right -->
+    <ellipse class="owl-critter__toe-right" cx="120" cy="205" rx="5" ry="7" fill="{{accentColor}}"/>
+    <ellipse class="owl-critter__toe-right" cx="130" cy="205" rx="5" ry="7" fill="{{accentColor}}"/>
+    <ellipse class="owl-critter__toe-right" cx="140" cy="205" rx="5" ry="7" fill="{{accentColor}}"/>
+
+    <!-- head -->
+    <ellipse class="owl-critter__head" cx="110" cy="55" rx="53" ry="35" fill="{{bodyColor}}"/>
+
+    <!-- head feathers -->
+    <polygon class="owl-critter__head__feather" points="50,85 110,50 170,85 110,20" fill="{{bodyColor}}" />
+    <polygon class="owl-critter__head__feather" points="55,100 110,50 165,100 110,20" fill="{{bodyColor}}" />
+    <polygon class="owl-critter__head__feather" points="55,10 110,50 165,10 110,20" fill="{{bodyColor}}" />
+    <polygon class="owl-critter__head__feather" points="55,10 110,38 165,10 110,30" fill="{{lightContrastColor}}"/>
+    <polygon class="owl-critter__head__feather" points="55,20 110,38 165,20 110,35" fill="{{accentColor}}" />
+
+    <!-- eye sockets -->
+    <ellipse class="owl-critter__eye-socket-left" cx="85" cy="65" rx="30" ry="35" fill="{{accentColor}}"/>
+    <ellipse class="owl-critter__eye-socket-right" cx="135" cy="65" rx="30" ry="35" fill="{{accentColor}}"/>
+
+    <!-- eyes -->
+    <circle class="owl-critter__eye-ball-left" cx="82" cy="70" r="24" fill="{{lightContrastColor}}"/>
+    <circle class="owl-critter__eye-ball-right" cx="138" cy="70" r="24" fill="{{lightContrastColor}}"/>
+
+    {{#if blinking}}
+      <polygon class="owl-critter__pupil-left--blinking" points="84,70 96,70 96,71 84,71 " fill="{{darkContrastColor}}"/>
+      <polygon class="owl-critter__pupil-left--blinking" points="124,70 135,70 135,71 124,71 " fill="{{darlContrastColor}}"/>
+    {{else}}
+      <circle class="owl-critter__pupil-left--open" cx="92" cy="70" r="4" fill="{{darkContrastColor}}"/>
+      <circle class="owl-critter__pupil-left--open" cx="128" cy="70" r="4" fill="{{darkContrastColor}}"/>
+    {{/if}}
+
+    <!-- beak  -->
+    <circle  class="owl-critter__beak__base" cx="110" cy="85" r="7" fill="{{lightContrastColor}}"/>
+    <circle class="owl-critter__beak__nostril-left" cx="107" cy="87" r="4" fill="{{noseColor}}"/>
+    <circle class="owl-critter__beak__nostril-right" cx="113" cy="87" r="4" fill="{{noseColor}}"/>
+    {{#if speaking}}
+      <polygon class="owl-critter__beak--open__inner" points="117,88 103,88 110,100" fill="{{darkContrastColor}}" />
+      <polygon class="owl-critter__beak--open__outter" points="117,87 103,87 110,92" fill="{{noseColor}}" />
+      <!-- music note -->
+      <circle class="owl-critter__music-note-left" cx="185" cy="55" r="5" fill="{{lightContrastColor}}" stroke="{{lightContrastColor}}" stroke-width="1"/>
+      <circle class="owl-critter__music-note-right" cx="205" cy="55" r="5" fill="{{lightContrastColor}}" stroke="{{lightContrastColor}}" stroke-width="1"/>
+      <polyline class="owl-critter__music-note-bar" points="190,55 190,25 210,25 210,55" fill="none" stroke="{{lightContrastColor}}" stroke-width="1" />
+    {{else}}
+      <polygon class="owl-critter__beak--closed" points="117,88 103,88 110,100" fill="{{noseColor}}" />
+    {{/if}}
+
+    <!-- feathers -->
+    <ellipse class="owl-critter__body-feather-bottom-row" cx="100" cy="150" rx="5" ry="12" fill="{{lightContrastColor}}"/>
+    <ellipse class="owl-critter__body-feather-bottom-row" cx="110" cy="150" rx="5" ry="12" fill="{{lightContrastColor}}"/>
+    <ellipse class="owl-critter__body-feather-bottom-row" cx="120" cy="150" rx="5" ry="12" fill="{{lightContrastColor}}"/>
+
+    <ellipse class="owl-critter__body-feather-second-row" cx="95" cy="140" rx="5" ry="12" fill="{{bodyColor}}"/>
+    <ellipse class="owl-critter__body-feather-second-row" cx="105" cy="140" rx="5" ry="12" fill="{{bodyColor}}"/>
+    <ellipse class="owl-critter__body-feather-second-row" cx="115" cy="140" rx="5" ry="12" fill="{{bodyColor}}"/>
+    <ellipse class="owl-critter__body-feather-second-row" cx="125" cy="140" rx="5" ry="12" fill="{{bodyColor}}"/>
+
+    <ellipse class="owl-critter__body-feather-third-row" cx="90" cy="130" rx="5" ry="12" fill="{{lightContrastColor}}"/>
+    <ellipse class="owl-critter__body-feather-third-row" cx="100" cy="130" rx="5" ry="12" fill="{{lightContrastColor}}"/>
+    <ellipse class="owl-critter__body-feather-third-row" cx="110" cy="130" rx="5" ry="12" fill="{{lightContrastColor}}"/>
+    <ellipse class="owl-critter__body-feather-third-row" cx="120" cy="130" rx="5" ry="12" fill="{{lightContrastColor}}"/>
+    <ellipse class="owl-critter__body-feather-third-row" cx="130" cy="130" rx="5" ry="12" fill="{{lightContrastColor}}"/>
+
+    <ellipse class="owl-critter__body-feather-top-row" cx="95" cy="120" rx="5" ry="12" fill="{{bodyColor}}"/>
+    <ellipse class="owl-critter__body-feather-top-row" cx="105" cy="120" rx="5" ry="12" fill="{{bodyColor}}"/>
+    <ellipse class="owl-critter__body-feather-top-row" cx="115" cy="120" rx="5" ry="12" fill="{{bodyColor}}"/>
+    <ellipse class="owl-critter__body-feather-top-row" cx="125" cy="120" rx="5" ry="12" fill="{{bodyColor}}"/>
+  </a>
+</svg>

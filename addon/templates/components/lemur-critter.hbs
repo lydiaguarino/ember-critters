@@ -1,0 +1,75 @@
+<svg viewBox="0 0 220 220" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <a href="" {{action 'blink'}}>
+    <!-- tail -->
+    {{#if moving}}
+      <g transform="rotate(45 110,110) translate(40, -10)">
+        <polygon points="110,10 130,30 110,180 90,30" fill="{{bodyColor}}" stroke="{{bodyColor}}" stroke-width="5" stroke-linejoin="round"/>
+        <polygon points="128,45 92,45" fill="none" stroke="{{accentColor}}" stroke-width="10" stroke-linejoin="round"/>
+        <polygon points="126,65 94,65" fill="none" stroke="{{accentColor}}" stroke-width="10" stroke-linejoin="round"/>
+        <polygon points="123,85 98,85" fill="none" stroke="{{accentColor}}" stroke-width="10" stroke-linejoin="round"/>
+      </g>
+    {{else}}
+      <g transform="rotate(-45 110,110) translate(-40, -10)">
+        <polygon points="110,10 130,30 110,180 90,30" fill="{{bodyColor}}" stroke="{{bodyColor}}" stroke-width="5" stroke-linejoin="round"/>
+        <polygon points="128,45 92,45" fill="none" stroke="{{accentColor}}" stroke-width="10" stroke-linejoin="round"/>
+        <polygon points="126,65 94,65" fill="none" stroke="{{accentColor}}" stroke-width="10" stroke-linejoin="round"/>
+        <polygon points="123,85 98,85" fill="none" stroke="{{accentColor}}" stroke-width="10" stroke-linejoin="round"/>
+      </g>
+    {{/if}}
+
+    <!-- hind legs -->
+    <polygon points="52,120 58,122 65,140 77,200 45,150" fill="{{bodyColor}}" stroke="{{bodyColor}}" stroke-width="5" stroke-linejoin="round"/>
+    <polygon points="168,120 162,122 155,140 143,200 175,150" fill="{{bodyColor}}" stroke="{{bodyColor}}" stroke-width="5" stroke-linejoin="round"/>
+
+    <polygon points="55,145 58,127 65,140 77,190" fill="{{lightContrastColor}}" stroke="{{lightContrastColor}}" stroke-width="5" stroke-linejoin="round"/>
+    <polygon points="165,145 162,127 155,140 143,190" fill="{{lightContrastColor}}" stroke="{{lightContrastColor}}" stroke-width="5" stroke-linejoin="round"/>
+
+    <!-- hind paws -->
+    <ellipse cx="70" cy="198" rx="25" ry="8" fill="{{bodyColor}}"/>
+    <ellipse cx="150" cy="198" rx="25" ry="8" fill="{{bodyColor}}"/>
+
+    <!-- body -->
+    <ellipse cx="110" cy="130" rx="53" ry="75" fill="{{bodyColor}}"/>
+    <ellipse cx="110" cy="150" rx="40" ry="35" fill="{{lightContrastColor}}"/>
+
+    <!-- toes left -->
+    <ellipse cx="90" cy="120" rx="15" ry="9" fill="{{accentColor}}"/>
+    <ellipse cx="80" cy="125" rx="5" ry="7" fill="{{accentColor}}"/>
+    <ellipse cx="90" cy="125" rx="5" ry="7" fill="{{accentColor}}"/>
+    <ellipse cx="100" cy="125" rx="5" ry="7" fill="{{accentColor}}"/>
+
+    <!-- toes right -->
+    <ellipse cx="130" cy="120" rx="15" ry="9" fill="{{accentColor}}"/>
+    <ellipse cx="120" cy="125" rx="5" ry="7" fill="{{accentColor}}"/>
+    <ellipse cx="130" cy="125" rx="5" ry="7" fill="{{accentColor}}"/>
+    <ellipse cx="140" cy="125" rx="5" ry="7" fill="{{accentColor}}"/>
+
+    <!-- head -->
+    <ellipse cx="110" cy="65" rx="53" ry="45" fill="{{lightContrastColor}}"/>
+
+    <!-- ears -->
+    <polygon points="50,85 110,50 170,85 110,20" fill="{{lightContrastColor}}"/>
+    <polygon points="55,100 110,50 165,100 110,20" fill="{{lightContrastColor}}"/>
+    <polygon points="50,10 110,18 170,10 155,70 65,70" fill="{{bodyColor}}" />
+    <polygon points="55,13 110,45 165,13 155,89 65,89" fill="{{lightContrastColor}}" />
+
+    <!-- eye sockets -->
+    <ellipse cx="85" cy="65" rx="30" ry="36" fill="{{bodyColor}}"/>
+    <ellipse cx="135" cy="65" rx="30" ry="36" fill="{{bodyColor}}"/>
+
+    <!-- eyes -->
+    <circle cx="82" cy="70" r="24" fill="{{eyeColor}}"/>
+    <circle cx="138" cy="70" r="24" fill="{{eyeColor}}"/>
+
+    {{#if blinking}}
+      <polygon points="84,70 96,70 96,71 84,71 " fill="{{darkContrastColor}}"/>
+      <polygon points="124,70 135,70 135,71 124,71 " fill="{{darkContrastColor}}"/>
+    {{else}}
+      <circle cx="92" cy="70" r="4" fill="{{darkContrastColor}}"/>
+      <circle cx="128" cy="70" r="4" fill="{{darkContrastColor}}"/>
+    {{/if}}
+
+    <!-- nose  -->
+    <circle cx="110" cy="107" r="6" fill="{{noseColor}}"/>
+  </a>
+</svg>

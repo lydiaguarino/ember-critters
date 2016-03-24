@@ -1,0 +1,114 @@
+body {
+  margin: 0px;
+  margin-top: 50px;
+  text-align: center;
+  background-color: #9baab9;
+  color: #495867;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+p {
+  /* font-family: 'Pacifico', cursive; */
+  font-size: 1.25em;
+}
+
+button {
+  margin: 10px;
+  color: #495867;
+}
+
+button:focus {
+  border: 3px solid #495867;
+  outline: none;
+}
+
+button:hover {
+  border: 3px solid #495867;
+}
+
+input {
+  width: 110px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: #0B3648;
+}
+
+.component-example {
+  text-align: left;
+  background-color:  #495867;
+  color: white;
+  padding: 24px;
+  border-radius: 5px;
+}
+
+.gap {
+  margin-top: 30px;
+}
+
+.indent {
+  margin-left: 25px;
+}
+
+.color-swatch {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: -3px;
+}
+
+.critter-row {
+  margin: auto;
+  width: 450px;
+  height: 450px;
+  padding-top: 15px;
+  /* margin-bottom: 150px; */
+  box-sizing: border-box;
+  border-radius: 5px;
+  /* border: 12px solid #FFFFFF; */
+}
+
+.critter-container {
+  width: 450px;
+  text-align: center;
+  margin: auto;
+}
+
+.snippet__source pre {
+  height: 300px;
+  width: 300px;
+}
+
+.critter-choice {
+  height: 75px;
+  width: 75px;
+  border-radius: 100%;
+  border: 3px solid #FFFFFF;
+}
+
+#choose-sloth {
+  background-color: #f2c66d;
+  padding-top: 0;
+}
+
+#choose-owl {
+  background-size: contain;
+  background-color: #495867;
+}
+
+#choose-fox {
+  background-color:  #495867;
+}
+
+#choose-lemur {
+  background-color: #f07464;
+}
+
+#choose-penguin {
+  background-color: #c7ede4;
+}
